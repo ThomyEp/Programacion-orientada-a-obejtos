@@ -45,6 +45,7 @@ public class TareaArrayList {
             numeros=lista.get(i);
             System.out.println( "numero " +(i+1)+":" +numeros );
         }
+        System.out.println( " La cantidad de numeros ingresados es: " +cont);
         System.out.println( " La suma de los numeros ingresados en la lista es: " +suma );
         Media=suma/cont; // sacamos media aritmetica usando la suma elementos de la lista y el cont: numero de datos de la lista
         System.out.println( " la media de la lista es: " +Media );
