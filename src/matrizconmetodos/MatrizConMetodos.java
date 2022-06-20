@@ -4,6 +4,8 @@
  */
 package matrizconmetodos;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Usuario
@@ -32,7 +34,8 @@ public class MatrizConMetodos {
         System.out.println("el valor cambiado es:"+a);
         System.out.println("Imprimir while");
         imprimirMatrizWhile(c);
-        
+        System.out.println("Matriz simetrica");
+        matrizSimetrica();
     }
     public static void imprimirMatriz(int arreglo[][]){
         for (int i = 0; i < arreglo.length; i++) {
@@ -63,5 +66,19 @@ public class MatrizConMetodos {
     }
     public static int cambioElemento(int x){
           return   x+=10;
+    }
+    public static void matrizSimetrica(){
+        Scanner sc=new Scanner(System.in);
+        int v[][]=new int[3][3];
+         for (int i = 0; i < v.length; i++) {
+            for (int j = 0; j < v[i].length; j++) {
+                if (i<=j) {
+                    System.out.print("Ingrese datos:"+i+" "+j);
+                    v[i][j]=sc.nextInt();
+                }
+                v[j][i]=v[i][j];
+            }
+        }
+         imprimirMatriz(v);
     }
 }
